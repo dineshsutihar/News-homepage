@@ -24,7 +24,6 @@ body {
 
 header{
   grid-area: header;
-  height: 0px;
   margin-bottom: 20px;
 }
 
