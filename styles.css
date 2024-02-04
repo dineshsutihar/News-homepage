@@ -4,9 +4,9 @@
 }
 
 body {
-  min-height: auto;
+  min-height: 80vh;
   max-width: 60vw;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   font-family: 'Inter', sans-serif;
   
@@ -17,12 +17,13 @@ body {
     "main main aside"
     "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 60px auto max-content auto;
+  grid-template-rows: auto auto auto auto;
   gap: 30px;
 }
 
 header{
   grid-area: header;
+  margin-bottom: 20px;
 }
 
 nav{
@@ -54,7 +55,7 @@ nav a{
 }
 
 nav a:hover{
-  background-color: hsl(228, 45%, 44%);
+  color:hsl(35, 77%, 62%) ;
 }
 
 nav li:first-child {
@@ -111,10 +112,11 @@ main .main-content{
 }
 
 .main-content h1{
-  font-size: 3.2rem;
+  font-size: 3.3rem;
   font-weight: 800;
   width: 100%;
   margin-top: 20px;
+  
 }
 
 .main-content .main-con-sec{
@@ -146,6 +148,11 @@ aside .content{
 
 }
 
+.main-con-sec button:hover{
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+}
+
 aside{
   grid-area: aside;
   background: black;
@@ -168,6 +175,11 @@ aside h3{
   font-weight: 800;
   margin-bottom: 20px;
 }
+
+aside h3:hover{
+  color: hsl(35, 77%, 62%);
+}
+
 hr{
   width: 100%;
   margin: 20px 0;
@@ -211,6 +223,10 @@ hr{
   /* margin-bottom: 5px; */
 }
 
+.lowerContent h4:hover{
+  color: hsl(5, 85%, 63%);
+}
+
 
 
 
@@ -228,7 +244,13 @@ footer{
 }
 
 
-@media (max-width: 768px) {
+@media(max-width:400px){
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
   .hideOnMobile {
     display: none;
   }
@@ -241,8 +263,16 @@ footer{
   
 }
 
-@media(max-width:400px){
-  .sidebar {
-    width: 100%;
+@media(max-width:1250px){
+  body{
+    max-width: 83vw;
   }
 }
+
+@media(max-width:1050px){
+  body{
+    max-width: 95vw;
+  }
+}
+
+
