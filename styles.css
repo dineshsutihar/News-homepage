@@ -9,6 +9,7 @@ body {
   margin: 20px auto;
   padding: 20px;
   font-family: 'Inter', sans-serif;
+  font-size: 16px;
   
   display:grid;
   grid-template-areas: 
@@ -136,7 +137,7 @@ aside .content{
 }
 
 .main-con-sec button{
-  width: 50%;
+  width: 50%, auto;
   padding:15px 20px;
   letter-spacing: 0.2em;
   background-color: hsl(5, 85%, 63%);
@@ -145,6 +146,7 @@ aside .content{
   margin-top: 30px;
   cursor: pointer;
   font-weight: 700;
+  text-wrap: nowrap;
 
 }
 
@@ -244,10 +246,21 @@ footer{
 }
 
 
-@media(max-width:400px){
+@media(max-width:500px){
   .sidebar {
     width: 100%;
   }
+
+  main .main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .main-content h1{
+    font-size: 2.5rem;
+  }
+
 }
 
 @media (max-width: 800px) {
@@ -260,6 +273,40 @@ footer{
   .menu-button {
     display: block;
   }
+
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+  body nav{
+    display: grid;
+    width: 95%;
+    position: fixed;
+    top: 0;
+    padding:20px 10px;
+    background-color: rgba(255, 255, 255, 0.459);
+    backdrop-filter: blur(10px);
+    height: 40px;
+    z-index: 99;
+    
+  }
+  main img{
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content h1{
+    font-size: 2.5rem;
+  }
+
+  #lower{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  
   
 }
 
